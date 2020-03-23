@@ -89,7 +89,7 @@ Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
 pessoa.mostrarAltura = function(){
-  return "Minha altura é " + "
+  return "Minha altura é " + pessoa.altura + " cm.";
 }
 
 /*
@@ -187,8 +187,39 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+pessoa.apresentacao = function() {
+
+  var sexo = pessoa.sexo;
+  var idade = pessoa.idade;
+  var caminhouQuantosMetros = pessoa.caminhouQuantosMetros;
+
+  if (sexo === 'F') {
+    if ((idade === 1) && (caminhouQuantosMetros === 1)) {
+      return ('Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ano, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metro.');
+    }
+    if (idade === 1) {
+      return ('Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ano, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+    }
+    if (caminhouQuantosMetros === 1) {
+      return ('Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+    }
+    return ('Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+  }
+
+  if (sexo === 'M') {
+    if ((idade === 1) && (caminhouQuantosMetros === 1)) {
+      return ('Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ano, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metro.');
+    }
+    if (idade === 1) {
+      return ('Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ano, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+    }
+    if (caminhouQuantosMetros === 1) {
+      return ('Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+    }
+    return ('Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ' cm e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros.');
+  }
+}
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao();
 ```
