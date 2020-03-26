@@ -127,10 +127,9 @@ if (carro.quantidadePessoas === carro.assentos) {
 if (n + carro.quantidadePessoas > carro.assentos) {
   var vagas = carro.assentos - carro.quantidadePessoas;
 
-  if 
 
   if (vagas === 1){
-    return 'Só cabe ' + vagas + ' no carro'
+    return 'Só cabe ' + vagas + ' no carro';
   }
 
   return 'Só cabem ' + vagas + ' no carro';
@@ -185,14 +184,15 @@ carro.adicionarPessoas(2)
 
 // Tire 4 pessoas do carro.
 carro.removerPessoas = function(n) {
-  var pessoas = carro.quantidadePessoas -n
+  var pessoas = (carro.quantidadePessoas -n)
 
-  if ((pessoas) < 0) {
+  if (pessoas < 0) {
     return 'Você não pode tirar tantas pessoas do carro.'
   }
   carro.quantidadePessoas = pessoas;
   return (n + ' já saíram do carro.')
-}
+};
+
 // Adicione 10 pessoas no carro.
 carro.adicionarPessoas(10)
 //'Só cabem 3 no carro'
