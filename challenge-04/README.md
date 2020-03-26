@@ -126,7 +126,7 @@ if (carro.quantidadePessoas === carro.assentos) {
 
 if (n + carro.quantidadePessoas > carro.assentos) {
   var vagas = carro.assentos - carro.quantidadePessoas;
-
+  var quantasPessoasCabem = vagas === 1 ? 'cabe' : 'cabem';
 
   if (vagas === 1){
     return 'Só cabe ' + vagas + ' no carro';
