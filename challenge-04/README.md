@@ -123,16 +123,15 @@ if (carro.quantidadePessoas === carro.assentos) {
   return 'O carro já está lotado!';
 }
 
-
 if (n + carro.quantidadePessoas > carro.assentos) {
   var vagas = carro.assentos - carro.quantidadePessoas;
   var quantasPessoasCabem = vagas === 1 ? 'cabe' : 'cabem';
 
   if (vagas === 1){
-    return 'Só cabe ' + vagas + ' no carro';
+    return 'Só ' + quantasPessoasCabem + ' ' + vagas + ' no carro';
   }
 
-  return 'Só cabem ' + vagas + ' no carro';
+  return 'Só ' + quantasPessoasCabem + ' ' + vagas + ' no carro';
 }
 
 carro.quantidadePessoas += n;
@@ -140,6 +139,9 @@ carro.quantidadePessoas += n;
 return 'Já temos ' + carro.quantidadePessoas + ' no carro.';
   
 };
+
+
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -189,6 +191,7 @@ carro.removerPessoas = function(n) {
   if (pessoas < 0) {
     return 'Você não pode tirar tantas pessoas do carro.'
   }
+  
   carro.quantidadePessoas = pessoas;
   return (n + ' já saíram do carro.')
 };
